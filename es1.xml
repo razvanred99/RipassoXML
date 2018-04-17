@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <People>
-    <Person>
+    <Person age="50">
         <Name>Razvan</Name>
         <Surname>Rosu</Surname>
         <Address>Via Antica Torre 8</Address>
@@ -13,7 +13,7 @@
         </Phones>
     </Person>
 
-    <Person>
+    <Person age="80">
         <Name>Simone</Name>
         <Surname>Tonn</Surname>
         <Address>Boh</Address>
@@ -25,7 +25,7 @@
         </Phones>
     </Person>
 
-    <Person>
+    <Person age="12">
         <Name>Valmir</Name>
         <Surname>Asllanaj</Surname>
         <Address>Boh</Address>

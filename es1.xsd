@@ -2,6 +2,12 @@
 
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
+    <xs:simpleType name="AgeType">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:maxInclusive value="120"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="TenChars">
         <xs:restriction base="xs:string">
             <xs:length value="10"/>
@@ -49,6 +55,7 @@
             <xs:element name="Height" type="MeasureM"/>
             <xs:element name="Phones" type="PhoneType"/>
         </xs:sequence>
+        <xs:attribute name="age" type="AgeType" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="MeasureM">
