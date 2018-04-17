@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<People>
+    <Person>
+        <Name>Razvan</Name>
+        <Surname>Rosu</Surname>
+        <Address>Via Antica Torre 8</Address>
+        <Height unit="cm">178</Height>
+        <Phones country="it">
+            <Phone model="cellphone">8423761322</Phone>
+            <Phone model="cellphone">8423612322</Phone>
+            <Phone model="home-telephone">8423726322</Phone>
+        </Phones>
+    </Person>
+
+    <Person>
+        <Name>Simone</Name>
+        <Surname>Tonn</Surname>
+        <Address>Boh</Address>
+        <Height unit="cm">178</Height>
+        <Phones country="ro">
+            <Phone model="cellphone">8423762322</Phone>
+            <Phone model="cellphone">8423762322</Phone>
+            <Phone model="home-telephone">8422761322</Phone>
+        </Phones>
+    </Person>
+
+    <Person>
+        <Name>Valmir</Name>
+        <Surname>Asllanaj</Surname>
+        <Address>Boh</Address>
+        <Height unit="cm">198</Height>
+        <Phones country="us">
+            <Phone model="cellphone">8423276122</Phone>
+            <Phone model="cellphone">8423726122</Phone>
+            <Phone model="home-telephone">8423761322</Phone>
+        </Phones>
+    </Person>
+
+</People>

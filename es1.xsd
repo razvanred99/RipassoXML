@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="TenChars">
+        <xs:restriction base="xs:string">
+            <xs:length value="10"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="PhoneElement">
+        <xs:simpleContent>
+            <xs:extension base="TenChars">
+                <xs:attribute name="model" use="required">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="cellphone|home-telephone|smartphone"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="Country">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="it|uk|us|ro"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="PhoneType">
+        <xs:sequence>
+            <xs:element name="Phone" type="PhoneElement" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="country" type="Country" use="required"/>
+    </xs:complexType>
+
+    <xs:simpleType name="UnitType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="cm|mm|dm|m"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="Person">
+        <xs:sequence>
+            <xs:element name="Name" type="xs:string"/>
+            <xs:element name="Surname" type="xs:string"/>
+            <xs:element name="Address" type="xs:string"/>
+            <xs:element name="Height" type="MeasureM"/>
+            <xs:element name="Phones" type="PhoneType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="MeasureM">
+        <xs:simpleContent>
+            <xs:extension base="xs:integer">
+                <xs:attribute name="unit" type="UnitType" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+
+    <xs:element name="People">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Person" maxOccurs="unbounded" minOccurs="0" type="Person"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
