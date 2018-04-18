@@ -11,6 +11,7 @@
             <Phone model="cellphone">8423612322</Phone>
             <Phone model="home-telephone">8423726322</Phone>
         </Phones>
+        <Gender value="m"/>
     </Person>
 
     <Person age="80">
@@ -23,6 +24,7 @@
             <Phone model="cellphone">8423762322</Phone>
             <Phone model="home-telephone">8422761322</Phone>
         </Phones>
+        <Gender value="m"/>
     </Person>
 
     <Person age="12">
@@ -35,6 +37,6 @@
             <Phone model="cellphone">8423726122</Phone>
             <Phone model="home-telephone">8423761322</Phone>
         </Phones>
+        <Gender value="m"/>
     </Person>
-
 </People>

@@ -34,6 +34,16 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="ValueGenderType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="m|f|n"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="GenderType">
+        <xs:attribute type="ValueGenderType" name="value"/>
+    </xs:complexType>
+
     <xs:complexType name="PhoneType">
         <xs:sequence>
             <xs:element name="Phone" type="PhoneElement" maxOccurs="unbounded"/>
@@ -54,6 +64,7 @@
             <xs:element name="Address" type="xs:string"/>
             <xs:element name="Height" type="MeasureM"/>
             <xs:element name="Phones" type="PhoneType"/>
+            <xs:element name="Gender" type="GenderType"/>
         </xs:sequence>
         <xs:attribute name="age" type="AgeType" use="required"/>
     </xs:complexType>
